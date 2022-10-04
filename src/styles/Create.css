@@ -1,0 +1,83 @@
+.CreatePageContainer {
+  padding: var(--biggest-padding);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--neutral-color-6);
+  overflow: auto;
+}
+
+.CreatePageContainer > .ImageSection > img {
+  height: 50vh;
+  width: auto;
+  object-fit: cover;
+}
+
+.CreatePageContainer > .TextSection {
+  width: 35%;
+}
+
+.CreatePageContainer > .TextSection > h3 {
+  margin-bottom: 20px;
+  color: var(--primary-color-1);
+  font-weight: 700;
+}
+
+.CreatePageContainer > .TextSection > div {
+  text-align: left;
+  margin-top: 50px;
+}
+.CreatePageContainer > .TextSection > div > a {
+  color: var(--neutral-color-6);
+
+  background: linear-gradient(
+    90deg,
+    var(--primary-color-3) 3.25%,
+    var(--primary-color-4) 100%
+  );
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 15px 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .CreatePageContainer {
+    padding: var(--desktop-padding);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .CreatePageContainer {
+    padding: var(--tablet-padding);
+  }
+
+  .CreatePageContainer > .ImageSection > img {
+    height: 30vh;
+    margin-bottom: 50px;
+  }
+  .CreatePageContainer {
+    padding: var(--mobile-padding);
+    flex-direction: column;
+  }
+  .CreatePageContainer > .TextSection {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .CreatePageContainer {
+    padding: var(--mobile-padding);
+  }
+  .CreatePageContainer > .ImageSection > img {
+    height: 20vh;
+  }
+  .CreatePageContainer {
+    padding: var(--mobile-padding);
+    flex-direction: column;
+  }
+  .CreatePageContainer > .TextSection {
+    width: 90%;
+  }
+}

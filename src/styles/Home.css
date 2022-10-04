@@ -1,0 +1,121 @@
+.HomePageContainer {
+  padding: var(--biggest-padding);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--neutral-color-6);
+  overflow: auto;
+}
+
+.HomePageContainer > .ImageSection > img {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
+
+.HomePageContainer > .TextSection {
+  text-align: right;
+}
+
+.HomePageContainer > .TextSection > h1 > p:not(:nth-child(2)) {
+  color: var(--primary-color-1);
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.HomePageContainer > .TextSection > h1 > p:nth-child(2) {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color-3) 24.2%,
+    var(--primary-color-4) 120.46%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  text-fill-color: transparent;
+}
+
+.HomePageContainer > .TextSection > h3 {
+  color: var(--neutral-color-1);
+  text-align: right;
+  margin-top: 20px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.HomePageContainer > .TextSection > a,
+.linkResponsive {
+  color: var(--neutral-color-6);
+
+  background: linear-gradient(
+    90deg,
+    var(--primary-color-3) 3.25%,
+    var(--primary-color-4) 100%
+  );
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 15px 40px;
+}
+
+.linkResponsive {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .HomePageContainer {
+    padding: var(--desktop-padding);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .HomePageContainer {
+    padding: var(--tablet-padding);
+    flex-direction: column-reverse;
+  }
+
+  .HomePageContainer > .TextSection > h1 > p:not(:nth-child(2)) {
+    line-height: 20px;
+  }
+
+  .linkDesktop {
+    display: none;
+  }
+
+  .linkResponsive {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .HomePageContainer > .ImageSection > img {
+    height: 55vh;
+  }
+
+  .HomePageContainer > .TextSection > h3 {
+    text-align: center;
+  }
+
+  .HomePageContainer > .TextSection {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .HomePageContainer {
+    padding: var(--mobile-padding);
+  }
+
+  .linkDesktop {
+    display: none;
+  }
+
+  .linkResponsive {
+    display: block;
+  }
+
+  .HomePageContainer > .ImageSection > img {
+    height: 45vh;
+  }
+}

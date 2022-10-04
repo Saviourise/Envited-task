@@ -1,13 +1,87 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+:root {
+  --primary-color-1: #240d57;
+  --primary-color-2: #501fc1;
+  --primary-color-3: #8456ec;
+  --primary-color-4: #e87bf8;
+
+  --secondary-color-1: #ccb6ff;
+  --secondary-color-2: #ede5ff;
+  --secondary-color-3: #f6f2ff;
+
+  --alert-color-warning: #ffd7e0;
+  --alert-color-error: #e61445;
+  --alert-color-success: #00805e;
+  --alert-color-info: #d3ffe2;
+
+  --neutral-color-1: #4f4f4f;
+  --neutral-color-2: #828282;
+  --neutral-color-3: #bdbdbd;
+  --neutral-color-4: #e0e0e0;
+  --neutral-color-5: #f2f2f2;
+  --neutral-color-6: #fbfaff;
+
+  --biggest-padding: 3rem 10rem;
+  --desktop-padding: 3rem 6rem;
+  --mobile-padding: 2rem;
+  --tablet-padding: 2rem 4rem;
+
+  --big-text: 64px;
+  --normal-text: 24px;
+
+  --big-text-tablet: 35px;
+  --normal-text-tablet: 18px;
+
+  --big-text-mobile: 30px;
+  --normal-text-mobile: 15px;
+}
+
+.big-text {
+  font-size: var(--big-text);
+}
+
+.normal-text {
+  font-size: var(--normal-text);
+}
+
+body, #root {
+  background: var(--neutral-color-6);
+}
+
+@media only screen and (max-width: 1000px) {
+  .big-text {
+    font-size: var(--big-text-tablet);
+  }
+  .normal-text {
+    font-size: var(--normal-text-tablet);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .big-text {
+    font-size: var(--big-text-mobile);
+  }
+  .normal-text {
+    font-size: var(--normal-text-mobile);
+  }
 }
